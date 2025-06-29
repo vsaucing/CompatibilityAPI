@@ -34,6 +34,13 @@ UINT dpi)
 	return AdjustWindowRectEx(lpRect, dwStyle, bMenu, dwExStyle);
 }
 
+BOOL WINAPI SystemParametersInfoForDpi( 
+	IN		UINT	Action,
+	IN		UINT	Parameter,
+	IN OUT	PVOID	Data,
+	IN		UINT	WinIni,
+	IN		UINT	Dpi);
+
 extern "C" __declspec(dllexport)
 INT WINAPI GetSystemMetricsForDpi(int nIndex, UINT dpi) //Fonksiyonun Dpi olmayan eski versiyona göre farkı ölçeğe göre değer vermesi. Örneğin 96 DPI = X ise, 144 DPI = %150X şeklinde.
 {
