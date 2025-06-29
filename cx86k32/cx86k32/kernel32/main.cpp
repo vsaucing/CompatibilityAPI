@@ -270,6 +270,13 @@ BOOL WINAPI VerifyVersionInfoW(
 	return TRUE;
 }
 
+BOOL WINAPI GetSystemCpuSetInformation(
+	PVOID		Information,
+	ULONG		BufferLength,
+	PULONG		ReturnedLength,
+	HANDLE		Process,
+	ULONG		Flags);
+
 /*ULONGLONG WINAPI VerSetConditionMask(
 	ULONGLONG ConditionMask,
 	DWORD TypeMask,
